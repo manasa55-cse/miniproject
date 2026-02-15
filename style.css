@@ -1,0 +1,282 @@
+/* TOP NAVIGATION */
+.top-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+/* Centered Title */
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Right Side Links */
+.nav-links {
+    margin-left: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6b81;
+}body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Center content like screenshot */
+.main-container {
+    width: 60%;
+    margin: auto;
+    padding-top: 50px;
+}
+.page-overlay {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    padding-top: 100px;
+}
+
+
+/* LOCATION BAR */
+.location {
+    background: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    width: fit-content;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* LOCATION SECTION (Above Filters) */
+.location-section {
+    margin-bottom: 15px;
+}
+
+.location-section select {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: none;
+    background: white;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.location-section select:focus {
+    outline: none;
+}
+
+
+/* FILTER BUTTONS */
+.filters {
+    margin-bottom: 20px;
+}
+
+.filter {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #f2f2f2;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.filter.active {
+    background: #dff5e1;
+    color: green;
+}
+
+/* FOOD CARD */
+.food-card {
+    display: flex;
+    align-items: center;
+    background: #fff4ec;
+    padding: 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.food-card img {
+    width: 90px;
+    height: 70px;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.food-details {
+    flex: 1;
+}
+
+.food-details h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.food-details p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+/* EXACT PRE-ORDER COLOR */
+.preorder-btn {
+    background: linear-gradient(90deg, #ff7a7a, #ff6b81);
+    border: none;
+    padding: 8px 25px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+/* PREORDER PAGE CARD */
+.preorder-card {
+    background: #fff4ec;
+    padding: 30px;
+    border-radius: 25px;
+    width: 400px;
+    margin: 80px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.preorder-card h2 {
+    margin-top: 0;
+    color: #4e342e;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.delivery-options {
+    margin-bottom: 20px;
+}
+
+.delivery-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* EXACT CONFIRM BUTTON COLOR */
+.confirm-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(90deg, #ff6b6b, #ff4d6d);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+/* HOME PAGE BACKGROUND */
+.home-bg {
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ABOUT PAGE BACKGROUND */
+.about-bg {
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* LOGIN PAGE BACKGROUND */
+.login-bg {
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* REGISTER PAGE BACKGROUND */
+.register-bg {
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* PREORDER PAGE BACKGROUND */
+.preorder-bg {
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.about-bg h2,
+.about-bg p {
+    color: white;
+}
+/* FORCE WHITE NAV LINKS */
+.nav-links a {
+    color: white !important;
+}
+
+/* FORCE WHITE NAVBAR BRAND */
+.navbar-brand {
+    color: white !important;
+}
+
+/* ABOUT PAGE TEXT WHITE */
+.about-bg h2,
+.about-bg h3,
+.about-bg p {
+    color: white;
+}
+/* LOGIN PAGE LINKS WHITE */
+.login-bg a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.login-bg a:hover {
+    color: #ff6b81 !important;
+}
+/* LOGIN PAGE TEXT WHITE */
+.login-bg h2 {
+    color: white;
+}
+
+.login-bg a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.login-bg a:hover {
+    color: #ff6b81 !important;
+}
+.btn-custom {
+    background: linear-gradient(90deg, #ff6b6b, #ff4d6d);
+    color: white !important;
+    border: none;
+}
+/* REGISTER PAGE TITLE WHITE */
+.register-bg h2 {
+    color: white;
+}
+/* REGISTER PAGE LINKS WHITE */
+.register-bg a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.register-bg a:hover {
+    color: #ff6b81 !important;
+}
+
+
+
+
+
+

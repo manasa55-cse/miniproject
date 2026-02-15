@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SheCook Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-bg">
+
+<!-- TOP NAVIGATION -->
+<div class="top-nav">
+    <div class="nav-left"></div>
+
+    <div class="logo-center">
+        SheCook Connect
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<div class="main-container">
+
+<!-- LOCATION -->
+<div class="location-section">
+    <select>
+        <option>Saidabad, Hyderabad</option>
+        <option>Dilsukhnagar</option>
+        <option>Koti</option>
+        <option>Ameerpet</option>
+    </select>
+</div>
+
+<!-- GPS BUTTON -->
+<div style="margin:15px 0;">
+    <button onclick="getLocation()" class="preorder-btn">
+        📍 Find Nearby Homemakers
+    </button>
+    <p id="userLocation"></p>
+</div>
+
+<!-- FILTER -->
+<div class="filter-dropdown">
+    <select id="foodFilter" onchange="filterFood()">
+        <option value="all">All</option>
+        <option value="veg">Veg</option>
+        <option value="nonveg">Non-Veg</option>
+        <option value="breakfast">Breakfast</option>
+    </select>
+</div>
+
+<!-- FOOD LIST -->
+<div class="food-list">
+
+    <div class="food-card veg" data-lat="17.3669" data-lon="78.5247">
+        <img src="image2.jpg">
+        <div class="food-details">
+            <h3>Lakshmi Home Kitchen</h3>
+            <p>Veg Meals </p>
+        </div>
+        <a href="preorder.html" class="preorder-btn">Pre-Order</a>
+    </div>
+
+    <div class="food-card veg" data-lat="17.4500" data-lon="78.3800">
+        <img src="image3.jpg">
+        <div class="food-details">
+            <h3>Roti & Sabzi</h3>
+            <p>₹70 </p>
+        </div>
+        <a href="preorder.html" class="preorder-btn">Pre-Order</a>
+    </div>
+
+    <div class="food-card breakfast" data-lat="17.4100" data-lon="78.5000">
+        <img src="image4.jpg">
+        <div class="food-details">
+            <h3>Down Town Homely Feast</h3>
+            <p>Idli, Vada & Dosa </p>
+        </div>
+        <a href="preorder.html" class="preorder-btn">Pre-Order</a>
+    </div>
+
+    <div class="food-card nonveg" data-lat="17.3500" data-lon="78.5300">
+        <img src="image5.jpg">
+        <div class="food-details">
+            <h3>Sania’s Kitchen</h3>
+            <p>Rice & Curry </p>
+        </div>
+        <a href="preorder.html" class="preorder-btn">Pre-Order</a>
+    </div>
+
+</div>
+</div>
+
+<script src="gps.js"></script>
+
+</body>
+</html>
