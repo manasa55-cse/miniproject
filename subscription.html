@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscription - SheCook Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="preorder-bg">
+
+<div class="top-nav">
+    <div class="logo-center">SheCook Connect</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<div class="main-container">
+    <div class="preorder-card">
+        <h2>Choose Subscription Plan</h2>
+
+        <label>
+            <input type="radio" name="plan" checked> Weekly Plan (7 Days)
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="radio" name="plan"> Monthly Plan (30 Days)
+        </label>
+
+        <br><br>
+
+        <label>Start Date</label>
+        <input type="date" class="input-field">
+
+        <a href="payment.html" class="confirm-btn" style="text-align:center; display:block;">Proceed to Payment</a>
+    </div>
+</div>
+
+<script>
+document.querySelector(".confirm-btn").addEventListener("click", function() {
+    alert("Subscription Confirmed Successfully!");
+});
+</script>
+
+</body>
+</html>

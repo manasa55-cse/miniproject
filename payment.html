@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment - SheCook Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="preorder-bg">
+
+<div class="top-nav">
+    <div class="logo-center">SheCook Connect</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<div class="main-container">
+    <div class="preorder-card">
+        <h2>Payment</h2>
+
+        <p><strong>Total Amount:</strong> ₹150</p>
+
+        <label>
+            <input type="radio" name="payment" checked> UPI
+        </label><br>
+
+        <label>
+            <input type="radio" name="payment"> Debit / Credit Card
+        </label><br>
+
+        <label>
+            <input type="radio" name="payment"> Cash on Delivery
+        </label>
+
+        <br><br>
+
+        <button class="confirm-btn">Pay Now</button>
+    </div>
+</div>
+
+<script>
+document.querySelector(".confirm-btn").addEventListener("click", function() {
+    alert("Payment Successful! Order Confirmed.");
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>
