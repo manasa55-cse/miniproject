@@ -1,3 +1,4 @@
+```css
 /* TOP NAVIGATION */
 .top-nav {
     position: relative;
@@ -31,11 +32,12 @@
 
 .nav-links a:hover {
     color: #ff6b81;
-}body {
+}
+
+body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
 
 /* Center content like screenshot */
 .main-container {
@@ -43,12 +45,12 @@
     margin: auto;
     padding-top: 50px;
 }
+
 .page-overlay {
     min-height: 100vh;
     background: rgba(0, 0, 0, 0.55);
     padding-top: 100px;
 }
-
 
 /* LOCATION BAR */
 .location {
@@ -78,7 +80,6 @@
 .location-section select:focus {
     outline: none;
 }
-
 
 /* FILTER BUTTONS */
 .filters {
@@ -132,7 +133,7 @@
     color: #777;
 }
 
-/* EXACT PRE-ORDER COLOR */
+/* PREORDER BUTTON */
 .preorder-btn {
     background: linear-gradient(90deg, #ff7a7a, #ff6b81);
     border: none;
@@ -174,7 +175,7 @@
     margin-bottom: 10px;
 }
 
-/* EXACT CONFIRM BUTTON COLOR */
+/* CONFIRM BUTTON */
 .confirm-btn {
     width: 100%;
     padding: 12px;
@@ -185,47 +186,15 @@
     font-weight: bold;
     font-size: 16px;
 }
-/* HOME PAGE BACKGROUND */
-.home-bg {
-    background: url('image.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
 
-/* ABOUT PAGE BACKGROUND */
-.about-bg {
-    background: url('image.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* LOGIN PAGE BACKGROUND */
-.login-bg {
-    background: url('image.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* REGISTER PAGE BACKGROUND */
-.register-bg {
-    background: url('image.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* PREORDER PAGE BACKGROUND */
+/* BACKGROUNDS */
+.home-bg,
+.about-bg,
+.login-bg,
+.register-bg,
 .preorder-bg {
     background: url('image.jpg') no-repeat center center fixed;
     background-size: cover;
-}
-.about-bg h2,
-.about-bg p {
-    color: white;
-}
-/* FORCE WHITE NAV LINKS */
-.nav-links a {
-    color: white !important;
-}
-
-/* FORCE WHITE NAVBAR BRAND */
-.navbar-brand {
-    color: white !important;
 }
 
 /* ABOUT PAGE TEXT WHITE */
@@ -234,16 +203,8 @@
 .about-bg p {
     color: white;
 }
-/* LOGIN PAGE LINKS WHITE */
-.login-bg a {
-    color: white !important;
-    text-decoration: none;
-}
 
-.login-bg a:hover {
-    color: #ff6b81 !important;
-}
-/* LOGIN PAGE TEXT WHITE */
+/* LOGIN PAGE */
 .login-bg h2 {
     color: white;
 }
@@ -256,16 +217,12 @@
 .login-bg a:hover {
     color: #ff6b81 !important;
 }
-.btn-custom {
-    background: linear-gradient(90deg, #ff6b6b, #ff4d6d);
-    color: white !important;
-    border: none;
-}
-/* REGISTER PAGE TITLE WHITE */
+
+/* REGISTER PAGE */
 .register-bg h2 {
     color: white;
 }
-/* REGISTER PAGE LINKS WHITE */
+
 .register-bg a {
     color: white !important;
     text-decoration: none;
@@ -275,6 +232,150 @@
     color: #ff6b81 !important;
 }
 
+.btn-custom {
+    background: linear-gradient(90deg, #ff6b6b, #ff4d6d);
+    color: white !important;
+    border: none;
+}
+
+/* BUTTON GROUP */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe-btn {
+    background: linear-gradient(90deg, #4CAF50, #2e7d32);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subscribe-btn:hover {
+    opacity: 0.9;
+}
+
+/* ================= CHATBOT CSS ================= */
+
+#chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#chatbot-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    height: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#chat-header {
+    background: #ff6b6b;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.lang-select {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+#chat-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input-area input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+#chat-input-area button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ================= FAQ SECTION ================= */
+
+.faq-section{
+    margin-top:40px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.faq-title{
+    text-align:center;
+    font-weight:600;
+    margin-bottom:25px;
+    color:#333;
+}
+
+.accordion-item{
+    border:none;
+    margin-bottom:15px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.accordion-button{
+    background:#fff3cd;
+    font-weight:500;
+    color:#333;
+}
+
+.accordion-button:hover{
+    background:#ffe8a1;
+}
+
+.accordion-button:not(.collapsed){
+    background:#ffc107;
+    color:black;
+}
+
+.accordion-body{
+    background:white;
+    line-height:1.6;
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+}
+```
 
 
 
