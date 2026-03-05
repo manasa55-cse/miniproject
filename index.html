@@ -183,8 +183,122 @@
 
 </div>
 </div>
+<!-- ================= CHATBOT START ================= -->
+
+<!-- Floating Button -->
+<div id="chatbot-btn" onclick="toggleChat()">💬</div>
+
+<!-- Chat Window -->
+<div id="chatbot-box">
+
+    <div id="chat-header">
+        SheCook Assistant 🤖
+        <span onclick="toggleChat()" style="float:right;cursor:pointer;">✖</span>
+    </div>
+
+    <!-- Language Selector -->
+    <select id="languageSelect" class="lang-select">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+    </select>
+
+    <!-- Messages -->
+    <div id="chat-messages"></div>
+
+    <!-- Input -->
+    <div id="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<!-- ================= SCRIPTS ================= -->
 
 <script src="gps.js"></script>
+
+<script>
+
+// Toggle Chat
+function toggleChat() {
+    let box = document.getElementById("chatbot-box");
+    box.style.display = (box.style.display === "flex") ? "none" : "flex";
+}
+
+// Send Message
+function sendMessage() {
+    let input = document.getElementById("chat-input");
+    let message = input.value.trim();
+    if (message === "") return;
+
+    let chat = document.getElementById("chat-messages");
+    chat.innerHTML += "<p><strong>You:</strong> " + message + "</p>";
+
+    let reply = getBotReply(message.toLowerCase());
+    chat.innerHTML += "<p><strong>Bot:</strong> " + reply + "</p>";
+
+    chat.scrollTop = chat.scrollHeight;
+    input.value = "";
+}
+
+// Safe Language Detection
+function getBotReply(msg) {
+
+    let langElement = document.getElementById("languageSelect");
+    let lang = langElement ? langElement.value : "en";
+
+    // Paneer
+    if (msg.includes("paneer")) {
+        if (lang === "hi") return "पनीर करी प्याज-टमाटर की ग्रेवी में मसालों के साथ बनाई जाती है।";
+        if (lang === "te") return "పనీర్ కర్రీ ఉల్లిపాయ-టమాటా గ్రేవీలో మసాలాలతో తయారు చేస్తారు.";
+        return "Paneer Curry is cooked in onion-tomato gravy with traditional spices.";
+    }
+
+    // Chicken
+    if (msg.includes("chicken")) {
+        if (lang === "hi") return "चिकन करी आंध्रा स्टाइल मसालों से बनाई जाती है।";
+        if (lang === "te") return "చికెన్ కర్రీ ఆంధ్రా స్టైల్ మసాలాతో తయారు చేస్తారు.";
+        return "Chicken Curry is prepared in spicy Andhra style.";
+    }
+
+    // Biryani
+    if (msg.includes("biryani")) {
+        if (lang === "hi") return "मटन बिरयानी दम स्टाइल में पकाई जाती है।";
+        if (lang === "te") return "మటన్ బిర్యానీ దమ్ స్టైల్‌లో వండుతారు.";
+        return "Mutton Biryani is layered and cooked in dum style.";
+    }
+
+    // Idli
+    if (msg.includes("idli")) {
+        if (lang === "hi") return "इडली चावल और उड़द दाल से भाप में बनाई जाती है।";
+        if (lang === "te") return "ఇడ్లీ ఆవిరిలో తయారు చేస్తారు.";
+        return "Idli is steamed from fermented rice batter.";
+    }
+
+    // Location
+    if (msg.includes("location") || msg.includes("near")) {
+        if (lang === "hi") return "📍 बटन दबाकर नजदीकी किचन देखें।";
+        if (lang === "te") return "📍 బటన్ నొక్కి సమీప కిచెన్స్ చూడండి.";
+        return "Click 📍 Find Nearby Homemakers to detect your GPS location.";
+    }
+
+    // Default
+    if (lang === "hi") return "पनीर, चिकन, बिरयानी या लोकेशन के बारे में पूछें 😊";
+    if (lang === "te") return "పనీర్, చికెన్, బిర్యానీ లేదా లోకేషన్ గురించి అడగండి 😊";
+    return "Ask about Paneer, Chicken, Biryani or Location 😊";
+}
+
+// Enter Key Support
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("chat-input").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            sendMessage();
+        }
+    });
+});
+
+</script>
+
 </body>
 </html>
-
